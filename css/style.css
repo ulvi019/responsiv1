@@ -87,9 +87,12 @@ ul {
 }
 
 nav {
+  display: none !important;
   width: 100%;
   height: auto;
   background-color: #fff8ef;
+  position: fixed !important;
+  z-index: 999;
 }
 nav img {
   width: 134px;
@@ -98,7 +101,23 @@ nav .container ul li a:hover {
   color: #fab758;
 }
 
-@media (max-width: 576px) {
+header {
+  width: 100%;
+  height: auto;
+  display: block !important;
+  padding: 10px 0;
+  background-color: #fff8ef;
+  position: fixed !important;
+  z-index: 999;
+}
+header .container ul li a:hover {
+  color: #fab758;
+}
+header img {
+  width: 120px;
+}
+
+@media (min-width: 452px) {
   .container {
     max-width: 540px;
   }
@@ -121,17 +140,15 @@ nav .container ul li a:hover {
     align-items: center;
     justify-content: start;
   }
-  #section11 {
-    display: none;
+  #section11 .row {
+    width: 100% !important;
   }
   #section11 .row img {
-    width: 30% !important;
-    margin-top: 10px;
+    width: 170px !important;
+    margin-top: 40px;
   }
-}
-@media (max-width: 992px) {
-  footer .box1 {
-    width: 100%;
+  header header img {
+    width: 120px;
   }
 }
 @media (min-width: 768px) {
@@ -141,9 +158,31 @@ nav .container ul li a:hover {
   #section9 .row .box .col {
     padding: 20px 50px !important;
   }
+  #section11 .row {
+    width: 100%;
+  }
   #section11 .row img {
     width: 150px;
     margin: 30px 20px;
+  }
+  header img {
+    width: 150px;
+  }
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 17px !important;
+  }
+  .button {
+    padding: 10px 10px;
+  }
+  img {
+    height: 80%;
+  }
+}
+@media (max-width: 992px) {
+  footer .box1 {
+    width: 90%;
   }
 }
 @media (min-width: 992px) {
@@ -176,6 +215,21 @@ nav .container ul li a:hover {
   #section11 .row img {
     width: 140px;
     margin: 30px 10px;
+  }
+  nav {
+    display: block !important;
+  }
+  header {
+    display: none !important;
+  }
+  p {
+    font-size: 20px !important;
+  }
+  .p1 {
+    font-size: 17px !important;
+  }
+  .p {
+    font-size: 17px !important;
   }
 }
 @media (min-width: 1200px) {
@@ -213,11 +267,6 @@ nav .container ul li a:hover {
     padding: 50px !important;
   }
 }
-nav {
-  position: fixed !important;
-  z-index: 999;
-}
-
 #section1 {
   width: 100%;
   height: auto;
@@ -249,8 +298,7 @@ nav {
 #section1 .boxes img {
   width: 100%;
 }
-#section1 .boxes h2 {
-  font-size: 50px;
+#section1 .boxes h1 {
   color: #343f52;
 }
 #section1 .boxes p {
@@ -378,7 +426,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 20px;
+  margin-right: 20px;
 }
 
 #section5 {
@@ -450,8 +498,8 @@ nav {
   background: rgb(255, 255, 252);
   background: linear-gradient(180deg, rgb(255, 255, 252) 26%, rgb(255, 249, 241) 66%);
   padding: 150px 0;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
 }
 #section8 .row .box .col {
   background-color: #fff;
@@ -507,15 +555,12 @@ footer {
   margin-top: 100px;
   padding: 100px 0;
   background-color: #343f52;
-  -webkit-clip-path: polygon(0 0, 100% 9%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 9%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%);
 }
 footer .box i {
   transition: 0.3s;
 }
 footer .box i:hover {
   transform: translateY(-5px);
-}
-footer .button {
-  height: 7vh;
 }/*# sourceMappingURL=style.css.map */
